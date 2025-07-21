@@ -21,3 +21,6 @@ Ale utworzenie partycji z web gui utworzyło wpis samo
 
 Podmieniam teraz konfigurację w docker compose, żeby voulmeny wskazywały na /mnt/sda1
 
+sudo mkdir /mnt/sda1/photoprism/pictures
+sudo mkdir /mnt/sda1/photoprism/.storage
+sudo mkdir ~/.storage
