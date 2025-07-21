@@ -19,5 +19,11 @@ sudo vi /etc/BackupPC/config.pl
 sudo mkdir -p /var/run/BackupPC
 sudo chown backuppc:backuppc /var/run/BackupPC
 
+#EDIT in web ui > Edit Config > Xfer >
+# RsyncClientPath: sudo /usr/bin/rsync
+# RsyncSshArgs: $sshPath -l backuppc
+
 sudo systemctl restart httpd 
 sudo systemctl restart backuppc
+
+
