@@ -7,3 +7,6 @@ dnf install jellyfin
 sudo firewall-cmd --zone=FedoraServer --add-port=8096/tcp --permanent
 sudo firewall-cmd --add-service=jellyfin --permanent
 sudo firewall-cmd --reload
+
+sudo systemctl enable jellyfin
+sudo systemctl start jellyfin
