@@ -10,3 +10,6 @@ sudo firewall-cmd --reload
 
 sudo systemctl enable jellyfin
 sudo systemctl start jellyfin
+
+sudo dnf install libva libva-utils intel-media-driver mesa-va-drivers
+vainfo
