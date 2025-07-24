@@ -1,0 +1,15 @@
+nohup sudo find /mnt/puzonbackup -type f -exec sudo rsync -a --ignore-existing --progress {} /mnt/sda1/AllFiles/ \; &
+
+touch rsync.log
+sudo chmod 777 rsync.log
+nohup sudo find /mnt/puzonbackup -type f -exec sudo rsync -a --ignore-existing --progress {} /mnt/sda1/AllFiles/ \; > rsync.log 2>&1 &
+
+sudo find /mnt/sda1/AllFiles/ -type f | wc -l
+sudo find /mnt/puzonbackup -type f | wc -l
+
+sudo find /mnt/puzonbackup/DESKTOP-O1M50AB/Users/ -type f | wc -l
+
+for dir in /mnt/puzonbackup/DESKTOP-O1M50AB/Users/*/; do
+  echo -n "$dir "
+  find "$dir" -type f | wc -l
+done
