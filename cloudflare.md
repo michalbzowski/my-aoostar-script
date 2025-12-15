@@ -1,3 +1,9 @@
-https://www.youtube.com/watch?v=9q4MO8FhI9I
+# Add cloudflared.repo to /etc/yum.repos.d/ 
+curl -fsSl https://pkg.cloudflare.com/cloudflared.repo | sudo tee /etc/yum.repos.d/cloudflared.repo
 
-docker run -d cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJhI
+#update repo
+sudo yum update
+
+# install cloudflared
+sudo yum install cloudflared
+
